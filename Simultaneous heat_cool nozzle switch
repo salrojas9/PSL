@@ -1,0 +1,12 @@
+G0 F{travel_xy_speed} X30 Y295 
+
+[if {new_extruder}=1] M104 T0 S200
+[if {new_extruder}=1] M104 T1 S{temperature_extruder2}
+[if {new_extruder}=1] M109 T0 R210
+[if {new_extruder}=1] M109 T1 S{temperature_extruder2}
+
+
+[if {new_extruder}=0] M104 T1 S200
+[if {new_extruder}=0] M104 T0 S{temperature_extruder1}
+[if {new_extruder}=0] M109 T1 R210
+[if {new_extruder}=0] M109 T0 S{temperature_extruder1}
